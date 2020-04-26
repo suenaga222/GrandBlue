@@ -1,0 +1,26 @@
+<div class="main">
+  <h1>Change the ToDo</h1>
+  <div class="form">
+    <%= form_tag("/todo/#{@todo.id}/update") do %>
+    <p>Content</p>
+    <textarea name="content"><%= @todo.content %></textarea>
+    <p>Tag</p>
+    <select name="tag">
+      <option value="fire">Fire</option>
+      <option value="water">Water</option>
+      <option value="ground">Ground</option>
+      <option value="wind">Wind</option>
+      <option value="light">Light</option>
+      <option value="darkness">Darkness</option>
+      <option value="">None</option>
+    </select>
+    <p>Priority</p>
+    <select name="priority">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <input type="submit" value="change">
+    <% end %>
+  </div>
+</div>

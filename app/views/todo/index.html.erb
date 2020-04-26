@@ -1,0 +1,25 @@
+<div class="main">
+  <h1>ToDo index</h1>
+  <% @tags.each do |tag| %>
+  <div class="todo">
+    <img class="tag-image" src="/images/tag/<%= tag.id %>.png">
+    <% @todos.each do |todo| %>
+      <% if todo.tag == tag.name %>
+      <div class="item">
+        <%= link_to("#{todo.content}", "/todo/#{todo.id}") %>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+  <% end %>
+  <div class="todo">
+    <img class="tag-image" src="/images/tag/default.png">
+    <% @todos.each do |todo| %>
+    <% if todo.tag == "" %>
+    <div class="item">
+      <%= link_to("#{todo.content}", "/todo/#{todo.id}") %>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>

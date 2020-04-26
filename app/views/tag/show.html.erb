@@ -1,0 +1,5 @@
+<div class="main">
+  tag name: <%= @tag.id %>
+  <img src="/images/tag/<%= @tag.id %>.png">
+  <%= link_to("delete","/tag/#{@tag.id}/delete", {method: "post"}) %>
+</div>

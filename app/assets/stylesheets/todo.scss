@@ -1,0 +1,24 @@
+// Place all the styles related to the todo controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.main {
+  text-align: center;
+}
+.todo {
+  display: inline-block;
+  width: 140px;
+  background: whitesmoke;
+  vertical-align: top;
+}
+.tag-image {
+  height: 50px;
+}
+.item {
+  width: 90%;
+  margin: 5px auto;
+  border: solid 1px;
+  border-radius: 5px;
+}
+.item p {
+  text-align: left;
+}

@@ -1,0 +1,15 @@
+Rails.application.routes.draw do
+  get 'tag/index'
+  get 'tag/new'
+  post 'tag/create'
+  get 'tag/:id' => 'tag#show'
+  post 'tag/:id/delete' => 'tag#destroy'
+  get 'todo/index'
+  get 'todo/new'
+  post 'todo/create'
+  get 'todo/:id/change' => 'todo#change'
+  post 'todo/:id/update' => 'todo#update'
+  post 'todo/:id/delete' => 'todo#destroy'
+  get 'todo/:id' => 'todo#show'
+  get '/' => 'home#top'
+end

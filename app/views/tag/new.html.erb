@@ -1,0 +1,9 @@
+<div class="main">
+  <%= form_tag("/tag/create", {multipart: true}) do %>
+    Tag's name
+    <input name="name">
+    tag's image
+    <input name="image" type="file">
+    <input type="submit">
+  <% end %>
+</div>

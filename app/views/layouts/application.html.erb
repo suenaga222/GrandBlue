@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GrandBlue</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header>
+      <% if flash[:notice] %>
+        <div class="flash">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+        <p class="title">GrandBlue Fantasy Portal!</p>
+        <div class="links">
+          <%= link_to("Top page", "/") %>
+        </div>
+      </header>
+      <div class="container">
+        <%= yield %>
+      </div>
+      <footer>
+        <p class="title">GrandBlue Fantasy Portal!</p>
+        <div class="links">
+          <%= link_to("Top page", "/") %>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<div class="main">
+  <h1>Create a new ToDo</h1>
+  <div class="form">
+  <%= form_tag("/todo/create") do %>
+    <p>Content</p>
+    <textarea name="content"></textarea>
+    <p>Tag</p>
+    <select name="tag">
+      <% @tags.each do |tag| %>
+      <option value="<%= tag.name %>"><%= tag.name %></option>
+      <% end %>
+      <option value="">None</option>
+    </select>
+    <p>Priority</p>
+    <select name="priority">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <input type="submit" value="create">
+    <% end %>
+  </div>
+</div>

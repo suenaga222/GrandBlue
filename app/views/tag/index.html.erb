@@ -1,0 +1,9 @@
+<div class="main">
+  <h1>Tag index</h1>
+  <% @tags.each do |tag| %>
+    <div class="tag">
+      <%= link_to("#{tag.name}","/tag/#{tag.id}") %>
+      <img class="tag-image" src="/images/tag/<%= tag.id %>.png">
+    </div>
+  <% end %>
+</div>

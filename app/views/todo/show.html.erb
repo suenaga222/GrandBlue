@@ -1,0 +1,10 @@
+<div class="main">
+  <h1>ToDo details</h1>
+  <div class="item">
+    content: <%= @todo.content %>
+    tag: <%= @todo.tag %>
+    priority: <%= @todo.priority %>
+    <%= link_to("Change", "/todo/#{@todo.id}/change") %>
+    <%= link_to("Delete", "/todo/#{@todo.id}/delete", {method: "post"}) %>
+  </div>
+</div>
