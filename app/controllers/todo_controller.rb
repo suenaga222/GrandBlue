@@ -1,6 +1,6 @@
 class TodoController < ApplicationController
   def index
-    @todos = Todo.all
+    @todos = Todo.all.order(priority: "ASC")
     @tags = Tag.all
   end
   
